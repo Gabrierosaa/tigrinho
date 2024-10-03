@@ -1,0 +1,101 @@
+/* Configurações Globais */
+body {
+    background-color: #121212;
+    color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.aposta {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Estilo do Dinheiro */
+#dinheiro {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00ff00; /* Verde para indicar dinheiro */
+}
+
+/* Fileiras */
+.fileira {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.fileira div {
+    margin: 0 10px;
+}
+
+/* Imagens */
+.foto {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.foto:hover {
+    transform: scale(1.1);
+}
+
+/* Botão */
+button {
+    background-color: #ffcc00; /* Amarelo */
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #ffaa00; /* Tom mais escuro ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+/* Resultado */
+#resultado {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    height: 30px; /* Para manter o espaço reservado */
+}
+
+/* Animações de piscar */
+.pisca-vermelho {
+    animation: piscar 0.5s linear 3;
+    background-color: red;
+}
+
+.pisca-verde {
+    animation: piscar 0.5s linear 3;
+    background-color: green;
+}
+
+@keyframes piscar {
+    0%, 100% { background-color: transparent; }
+    50% { background-color: inherit; }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .aposta {
+        padding: 10px;
+    }
+
+    #dinheiro {
+        font-size: 1.5rem;
+    }
+}
